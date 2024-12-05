@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>한 장씩 넘어가는 스크롤</title>
+    <link rel="stylesheet" href="styles.css" />
+
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Black+Han+Sans&family=Nanum+Gothic+Coding&family=Righteous&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+  <body>
+    <div class="container">
+      <!-- 왼쪽 고정 영역 -->
+      <div class="fixed-side" id="fixed-side-content"></div>
+
+      <!-- 오른쪽 슬라이드 -->
+      <div class="draggable-side" id="draggable">
+        <div class="scrollable-content">
+          
+          <div class="slide slide1">
+            <a class="left" href="#about">ABOUT</a>
+            <a class="right" href="#information">INFORMATION</a>
+            <a class="top" href="#skill">SKILL</a>
+            <a class="bottom" href="#email">EMAIL</a>
+          </div>
+          <!-- 메뉴 end -->
+
+          <div class="slide slide2" id="about">
+            <h2>ABOUT</h2>
+            <p>
+              이름 : 홍길동 (Hong Gil Dong)<br />
+              나이 : 00세 (2001.02.03)<br />
+              주소 : 경기도 고양시 일산동구 중앙로
+            </p>
+          </div>
+          <!-- about end -->
+
+          <div class="slide slide3" id="information">
+            <h2>INFORMATION</h2>
+            <ul>
+              <li>
+                2022.09 - 2023.01 : 라인컴퓨터아트학원 JAVA기반 스마트웹&앱
+                개발자 양성과정 수료
+              </li>
+              <li>0000.03 - 0000.02 : 00대학교 000과 졸업</li>
+              <li>0000.03 - 0000.02 : 00고등학교 00학과 졸업</li>
+            </ul>
+          </div>
+          <!-- info end -->
+
+          <div class="slide slide4" id="skill">네 번째 슬라이드</div>
+          <!-- skill end -->
+
+          <div class="slide slide5" id="email">
+            <h2>연락처</h2>
+            <div>
+              <div>
+                <p class="show">번호</p>
+                <div class="hide">000-0000-0000</div>
+              </div>
+              <div>
+                <p class="show">이메일</p>
+                <div class="hide">aaaa1111@ghltkapdlf.com</div>
+              </div>
+            </div>
+          </div>
+          <!-- email end -->
+        </div>
+      </div>
+    </div>
+    <!-- overflow scroll 때문에 작아지면 뭔가 높이가 안 맞게 됨....
+      스크롤이 x로도 생겨서 생긴 문제였다 -->
+
+    <script src="script.js"></script>
+  </body>
+</html>

@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>한 장씩 넘어가는 스크롤</title>
+    <link rel="stylesheet" href="styles1.css" />
+
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Black+Han+Sans&family=Do+Hyeon&family=Nanum+Gothic+Coding&family=Noto+Sans+KR:wght@100..900&family=Righteous&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+  <body>
+    <div class="container">
+      <!-- 왼쪽 고정 영역 -->
+      <div id="fixed-side" class="fixed-side">
+        <h1>PORTFOLIO</h1>
+      </div>
+
+      <!-- 오른쪽 슬라이드 -->
+      <div class="draggable-side" id="draggable">
+        <div class="scrollable-content">
+          <div class="slide slide1">
+            <a class="left" href="#about">ABOUT</a>
+            <a class="right" href="#information">INFORMATION</a>
+            <a class="top" href="#skill">SKILL</a>
+            <a class="bottom" href="#email">EMAIL</a>
+          </div>
+          <!-- 메뉴 end -->
+
+          <div class="slide slide2" id="about">
+            <h2>ABOUT</h2>
+            <p class="slidecontent1 slidecontent">
+              서효민 (Seo Hyomin)<br />
+              1997.01.01.<br />
+              경기도 안산시 단원구 고잔동
+            </p>
+          </div>
+          <!-- about end -->
+
+          <div class="slide slide3" id="information">
+            <h2>INFORMATION</h2>
+            <ul class="slidecontent2 slidecontent">
+              <li>
+                2022.09 - 2023.01 : <span>
+                  라인컴퓨터아트학원<br />
+                  JAVA기반 스마트웹&앱 개발자 양성과정 수료
+                </span>
+              </li>
+              <li>0000.03 - 0000.02 : <span>00대학교 000과 졸업</span></li>
+              <li>0000.03 - 0000.02 : <span>00고등학교 00학과 졸업</span></li>
+            </ul>
+          </div>
+          <!-- info end -->
+
+          <div class="slide slide4" id="skill">
+            <h2>SKILL</h2>
+            <ul class="slidecontent3 slidecontent">
+              <li>
+                <span>html</span>
+                <progress min="0" max="100" value="78" class="progress"></progress>
+              </li>
+              <li>
+                <span>css</span>
+                <progress min="0" max="100" value="80" class="progress"></progress>
+              </li>
+              <li>
+                <span>js</span>
+                <progress min="0" max="100" value="68" class="progress"></progress>
+              </li>
+              <li>
+                <span>figma</span>
+                <progress min="0" max="100" value="86" class="progress"></progress>
+              </li>
+              <li>
+                <span>photoshop</span>
+                <progress min="0" max="100" value="91" class="progress"></progress>
+              </li>
+              <li>
+                <img src="images/free-icon-html-5-174854.png" alt="html">
+                <img src="images/free-icon-css-3-732190.png" alt="css">
+                <img src="images/free-icon-js-5968292.png" alt="js">
+                <img src="images/free-icon-figma-5968705.png" alt="figma">
+                <img src="images/free-icon-photoshop-5968520.png" alt="photoshop">
+              </li>
+            </ul>
+          </div>
+          <!-- skill end -->
+
+          <div class="slide slide5" id="email">
+            <h2>CONTACT INFORMATION</h2>
+            <div class="slidecontent4 slidecontent">
+              <div>
+                <p class="show">번호</p>
+                <div class="hide">010-1234-5678</div>
+              </div>
+              <div>
+                <p class="show">이메일</p>
+                <div class="hide">aabc1123@dlapdlf.com</div>
+              </div>
+            </div>
+          </div>
+          <!-- email end -->
+        </div>
+      </div>
+    </div>
+    <!-- overflow scroll 때문에 작아지면 뭔가 높이가 안 맞게 됨....
+      스크롤이 x로도 생겨서 생긴 문제였다 -->
+
+    <script src="script.js"></script>
+  </body>
+</html>

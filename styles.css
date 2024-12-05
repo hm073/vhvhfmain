@@ -1,0 +1,143 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+::-webkit-scrollbar {
+  width: 0;
+}
+a {text-decoration: none;}
+
+body,
+html {
+  height: 100%;
+  font-family: Arial, sans-serif;
+  overflow: hidden; /* 기본 페이지에서 스크롤이 안 생기도록 함 */
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  scroll-behavior: smooth;
+}
+
+.container {
+  display: flex;
+  justify-content: center; /* 수평 가운데 정렬 */
+  align-items: center; /* 수직 가운데 정렬 */
+  height: 100%;
+  width: 90vw;
+
+  /* background-color: antiquewhite; */
+}
+
+.fixed-side {
+    width: 40%; /* 고정된 영역 */
+    height: 80vh; /* 고정된 영역의 높이 */
+    background: url("images/효민.png") center center;
+    background-size: auto;
+    background-repeat: no-repeat;
+    color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    z-index: 10;
+    transition: all 0.3s;
+    padding: 20px;
+    font-size: 1.5rem;
+  }
+  
+.fixed-side h3 {
+font-size: 2rem;
+}
+
+.fixed-side:hover {
+  filter: none;
+  /* transform: scale(60%); */
+  background-repeat: no-repeat;
+}
+
+.draggable-side {
+  width: 60%; /* 슬라이드 영역이 화면의 50% 차지 */
+  height: 80vh; /* 슬라이드 영역의 높이를 화면의 80% 차지 */
+  overflow: hidden; /* 내부에서만 스크롤이 가능하도록 설정 */
+  display: flex;
+  flex-direction: column;
+}
+
+.scrollable-content {
+  height: 100%; /* 부모 요소 높이를 100%로 설정 */
+  width: 100%; /* 부모 요소의 너비를 100%로 설정 */
+  overflow-y: scroll; /* 슬라이드 영역에서 스크롤 가능 */
+  overflow-x: hidden;
+  scroll-snap-type: y mandatory; /* 수직 스크롤 스냅 활성화 */
+}
+
+.slide {
+  height: 100%; /* 각 슬라이드는 화면의 높이만큼 차지 */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 2rem;
+  background-color: #3498db;
+  color: white;
+  /* border-bottom: 1px solid #fff; */
+  scroll-snap-align: start; /* 각 슬라이드가 시작 위치에서 스냅되도록 설정 */
+  transition: transform 0.3s ease;
+  background-color: #2f2f2f;
+}
+
+
+.slide1 {
+  display: flex;
+  flex-direction: column;
+  align-items: start;
+  justify-content: center;
+  padding: 15%;
+  width: 100%;
+  height: 100%;
+
+  font-family: "Black Han Sans", sans-serif;
+  font-size: 5em;
+}
+.slide1> a {
+  cursor: pointer;
+  -webkit-text-stroke: 1px #f9f7f1;
+  background-image: linear-gradient(0deg, #f9f7f1, #f9f7f1);
+  background-clip: text;
+  color: transparent;
+  background-repeat: no-repeat;
+  /* background-position: 0% 0%;
+    background-size: 0 100%; */
+  transition: all 0.4s;
+}
+.slide1 a:hover {
+  background-size: 100% 100%;
+}
+
+.left {
+  background-position: 0% 0%;
+  background-size: 0 100%;
+}
+.right {
+  background-position: 100% 0%;
+  background-size: 0 100%;
+}
+.top {
+  background-position: 0% 0%;
+  background-size: 100% 0;
+}
+.bottom {
+  background-position: 0% 100%;
+  background-size: 100% 0;
+}
+.center {
+  background-position: 50% 50%;
+  background-size: 0 0%;
+}
+
+
+.slide2 {
+  display: flex;
+}
